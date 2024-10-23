@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Sourcecodes\KeepAwake\KeepAwake\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="ExitButton.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MaxMinButton.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MinimizeButton.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ToggleButton.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="ExitButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LanguageButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="StayOnTopButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MouseMoveButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MaxMinButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MinimizeButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ToggleButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

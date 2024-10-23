@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeepAwake", "KeepAwake\KeepAwake.csproj", "{19C4EE77-B124-4A87-A2A1-B625695243F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Build", "build\Build.csproj", "{87927ADB-464C-4E5C-8D7C-46685BA697AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19C4EE77-B124-4A87-A2A1-B625695243F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19C4EE77-B124-4A87-A2A1-B625695243F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19C4EE77-B124-4A87-A2A1-B625695243F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19C4EE77-B124-4A87-A2A1-B625695243F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87927ADB-464C-4E5C-8D7C-46685BA697AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87927ADB-464C-4E5C-8D7C-46685BA697AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5C7C9DC-6A0C-4215-AA9D-7B7C738274DF}
+	EndGlobalSection
+EndGlobal

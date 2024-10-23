@@ -1,0 +1,152 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<Description>KeepAwake mouse movement and activity simulator to prevent screensaver or inactivity timeout</Description>
+	<Copyright>© 2024 Alexander Feuster</Copyright>
+	<Authors>Alexander Feuster</Authors>
+	<Company></Company>
+	<Version>1.0.0</Version>
+	<AssemblyVersion>1.0.0</AssemblyVersion>
+	<FileVersion>1.0.0</FileVersion>
+	<GenerateAssemblyInfo>true</GenerateAssemblyInfo>	  
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <PlatformTarget>x64</PlatformTarget>
+    <PublishAot>false</PublishAot>
+    <PublishRelease>true</PublishRelease>
+	<PublishTrimmed>false</PublishTrimmed>
+	<TrimMode>partial</TrimMode>
+	<TrimmerRemoveSymbols>true</TrimmerRemoveSymbols>
+	<UseSystemResourceKeys>true</UseSystemResourceKeys>
+	<InvariantGlobalization>false</InvariantGlobalization>
+	<SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
+	<_SuppressWpfTrimError>true</_SuppressWpfTrimError>
+	<DebugType>embedded</DebugType>
+	<StripSymbols>true</StripSymbols>
+	<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+	<IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+	<ApplicationIcon>Assets\App.ico</ApplicationIcon>
+	<ErrorReport>none</ErrorReport>
+	<NeutralLanguage>en-US</NeutralLanguage>
+	<Product></Product>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\App.ico" />
+    <None Remove="Assets\App.png" />
+    <None Remove="Assets\clock.ico" />
+    <None Remove="Assets\clock.png" />
+    <None Remove="Assets\Down.png" />
+    <None Remove="Assets\down_black.png" />
+    <None Remove="Assets\down_white.png" />
+    <None Remove="Assets\Exit.png" />
+    <None Remove="Assets\exit_black.png" />
+    <None Remove="Assets\exit_white.png" />
+    <None Remove="Assets\icon-.ico" />
+    <None Remove="Assets\icon2.ico" />
+    <None Remove="Assets\locked_black.png" />
+    <None Remove="Assets\locked_white.png" />
+    <None Remove="Assets\Maximize.png" />
+    <None Remove="Assets\Minimize.png" />
+    <None Remove="Assets\min_black.png" />
+    <None Remove="Assets\min_white.png" />
+    <None Remove="Assets\mousemove_black.png" />
+    <None Remove="Assets\mousemove_white.png" />
+    <None Remove="Assets\mouse_black.png" />
+    <None Remove="Assets\mouse_white.png" />
+    <None Remove="Assets\Translation\de-de.png" />
+    <None Remove="Assets\Translation\en-us.png" />
+    <None Remove="Assets\UbuntuMonoNerdFontMono-Regular.ttf" />
+    <None Remove="Assets\UbuntuSansNerdFont-Regular.ttf" />
+    <None Remove="Assets\unlocked_black.png" />
+    <None Remove="Assets\unlocked_white.png" />
+    <None Remove="Assets\Up.png" />
+    <None Remove="Assets\up_black.png" />
+    <None Remove="Assets\up_white.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\App.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\exit_white.png" />
+    <Resource Include="Assets\Translation\de-de.png" />
+    <Resource Include="Assets\Translation\en-us.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\down_black.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\App.ico" />
+    <Resource Include="Assets\exit_black.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\locked_black.png" />
+    <Resource Include="Assets\min_black.png" />
+    <Resource Include="Assets\mousemove_black.png" />
+    <Resource Include="Assets\mouse_black.png" />
+    <Resource Include="Assets\UbuntuMonoNerdFontMono-Regular.ttf" />
+    <Resource Include="Assets\UbuntuSansNerdFont-Regular.ttf" />
+    <Resource Include="Assets\unlocked_black.png" />
+    <Resource Include="Assets\up_black.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Assets\Translation\Resource_de-de.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource_de-de.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Assets\Translation\Resource_en-us.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource_en-us.resx</DependentUpon>
+    </Compile>
+    <Compile Update="LanguageButton.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="StayOnTopButton.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MouseMoveButton.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Assets\Translation\Resources.de-de.resx">
+      <CustomToolNamespace>Lang_de_de</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Assets\Translation\Resources.en-us.resx">
+      <CustomToolNamespace>Lang_en_us</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Assets\Translation\Resource_de-de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource_de-de.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Assets\Translation\Resource_en-us.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource_en-us.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

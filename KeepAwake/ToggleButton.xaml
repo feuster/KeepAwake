@@ -1,0 +1,97 @@
+﻿<UserControl x:Class="KeepAwake.ToggleButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KeepAwake"
+             mc:Ignorable="d" 
+             d:DesignHeight="90" d:DesignWidth="250" d:Background="#FF3060FF">
+
+    <ToggleButton x:Name="toggleButton" Width="{Binding ActualWidth}" Height="{Binding ActualHeight}" Command="{Binding ToggleCommand}" IsChecked="{Binding Checked}" >
+        <ToggleButton.Resources>
+            <ResourceDictionary>
+                <!--
+                <Color x:Key="ColorUnchecked">#FF0856CF</Color>
+                <Color x:Key="ColorTextUnchecked">#FFF0F0FF</Color>
+                <Color x:Key="ColorChecked">#FFF0F0FF</Color>
+                <Color x:Key="ColorTextChecked">#FF0856CF</Color>
+                <Color x:Key="ColorShadow">#FF000000</Color>
+                -->
+                <Color x:Key="ColorUnchecked">#1e56c3</Color>
+                <Color x:Key="ColorTextUnchecked">#FFF0F0FF</Color>
+                <Color x:Key="ColorChecked">#FFF0F0FF</Color>
+                <Color x:Key="ColorTextChecked">#1e56c3</Color>
+                <Color x:Key="ColorShadow">#FF000000</Color>
+            </ResourceDictionary>
+        </ToggleButton.Resources>
+
+        <ToggleButton.Style>
+            <Style TargetType="{x:Type ToggleButton}">
+                <Setter Property="IsChecked" Value="{Binding Checked}" />
+                <Setter Property="Canvas.OverridesDefaultStyle" Value="True" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type ToggleButton}">
+                            <Border x:Name="border" CornerRadius="{Binding CornerRadius}" BorderThickness="0" Background="{TemplateBinding Background}" >
+                                <ContentPresenter Width="{Binding ActualWidth}" Height="{Binding ActualHeight}">
+                                    <ContentPresenter.Content>
+                                        <Grid Width="{Binding ActualWidth}" Height="{Binding ActualHeight}">
+                                            <TextBlock x:Name="CaptionTextShadow" Text="{Binding Caption}" d:Text="ToggleButton" FontFamily="./Assets/#UbuntuSans NF" TextDecorations="None" FontSize="{Binding CaptionFontSize}" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="0,0,0,0" TextAlignment="Center" >
+                                                <TextBlock.Effect>
+                                                    <BlurEffect Radius="8.0" KernelType="Gaussian" />
+                                                </TextBlock.Effect>
+                                            </TextBlock>
+                                            <TextBlock x:Name="CaptionText" Text="{Binding Caption}" d:Text="ToggleButton" FontFamily="./Assets/#UbuntuSans NF" TextDecorations="None" FontSize="{Binding CaptionFontSize}" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="0,0,0,0" TextAlignment="Center" />
+                                        </Grid>
+                                    </ContentPresenter.Content>
+                                </ContentPresenter>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <MultiDataTrigger>
+                                    <MultiDataTrigger.Conditions>
+                                        <Condition Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}" Value="true"/>
+                                    </MultiDataTrigger.Conditions>
+                                    <Setter Property="Effect">
+                                        <Setter.Value>
+                                            <DropShadowEffect ShadowDepth="2" Color="{StaticResource ColorShadow}" BlurRadius="2" />
+                                        </Setter.Value>
+                                    </Setter>
+                                </MultiDataTrigger>
+                                <MultiDataTrigger>
+                                    <MultiDataTrigger.Conditions>
+                                        <Condition Binding="{Binding Checked}" Value="false"/>
+                                    </MultiDataTrigger.Conditions>
+                                    <Setter Property="Canvas.Background">
+                                        <Setter.Value>
+                                            <SolidColorBrush Opacity="1.0" Color="{StaticResource ColorUnchecked}" />
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Setter Property="TextBlock.Foreground">
+                                        <Setter.Value>
+                                            <SolidColorBrush Color="{StaticResource ColorTextUnchecked}" />
+                                        </Setter.Value>
+                                    </Setter>
+                                </MultiDataTrigger>
+                                <MultiDataTrigger>
+                                    <MultiDataTrigger.Conditions>
+                                        <Condition Binding="{Binding Checked}" Value="true"/>
+                                    </MultiDataTrigger.Conditions>
+                                    <Setter Property="Canvas.Background">
+                                        <Setter.Value>
+                                            <SolidColorBrush Opacity="1.0" Color="{StaticResource ColorChecked}" />
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Setter Property="TextBlock.Foreground">
+                                        <Setter.Value>
+                                            <SolidColorBrush Color="{StaticResource ColorTextChecked}" />
+                                        </Setter.Value>
+                                    </Setter>
+                                </MultiDataTrigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ToggleButton.Style>
+    </ToggleButton>
+</UserControl>
