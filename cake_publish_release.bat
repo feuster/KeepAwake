@@ -1,5 +1,5 @@
 @echo off
-set appname=KeepAwake-Standalone
+set appname=KeepAwake
 set artifact="%~dp0Release\%appname%.exe"
 cls
 echo ****************************************

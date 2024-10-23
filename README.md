@@ -10,6 +10,12 @@ KeepAwake is a mouse movement and activity simulator to prevent a screensaver or
 
 ## Manual
 
+### Remarks
+- The KeepAwake UI supports german and english captions
+- Depending on the system default language the according UI language is automatically set
+- Regardless of the system language can the language be manually switched
+- If simulated mouse movement is activated KeepAwake will try to move the mouse mainly over the Start/Stop button to make it easier to stop the execution
+
 ### UI screenshot
 <img src="./docs/KeepAwake.png" width=50% height=50% style="background-color:transparent;" />
 
