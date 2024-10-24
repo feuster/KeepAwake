@@ -3,6 +3,9 @@
 ## Introduction
 KeepAwake is a mouse movement and activity simulator to prevent a screensaver or inactivity timeout in a Windows OS based system
 
+### Homepage
+[KeepAwake on Github](https://github.com/feuster/KeepAwake)
+
 ## KeepAwake Installation
 - KeepAwake needs [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) (either as Runtime or SDK)
 - In case the KeepAwake EXE is build as _Standalone_ version no additional [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) is needed
