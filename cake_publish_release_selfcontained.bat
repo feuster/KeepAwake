@@ -14,7 +14,7 @@ echo.
 echo ========================================
 echo Starting Cake build...
 echo ========================================
-Powershell.exe -executionpolicy remotesigned -File build.ps1 --configuration=Release --framework=net8.0-windows --runtime=win-x64 --selfcontained=true --publishdir="../Release" --publishexename="%appname%"
+Powershell.exe -executionpolicy remotesigned -File build.ps1 --configuration=Release --framework=net9.0-windows --runtime=win-x64 --selfcontained=true --publishdir="../Release" --publishexename="%appname%"
 echo.
 echo ========================================
 echo Artifact
